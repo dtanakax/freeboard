@@ -1542,11 +1542,10 @@ ul.datasource-input-suffix {
 	color: #626262;
 }
 
-.title.bordered {
-	border: solid 3px #d3d4d4;
+.title.logo {
 	display: inline-block;
-	padding: 2px 17px 2px 17px;
-	line-height: 39px;
+	padding: 2px 10px 2px 10px;
+	line-height: 42px;
 }
 
 h1.title {
@@ -1726,18 +1725,6 @@ html.boardtools-opening #hamburger:after
 	.text-button {
 		font-size: 14px;
 		line-height: 22px;
-	}
-
-	h1.title {
-		margin-bottom: 0px;
-		font-size: 13px;
-		letter-spacing: 0px;
-	}
-
-	.title.bordered {
-		padding: 1px 8px;
-		line-height: 25px;
-		border-width: 2px;
 	}
 
 	.modal header {
