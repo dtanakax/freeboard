@@ -187,7 +187,7 @@ Copyright
 
 Copyright © 2013 Jim Heising (https://github.com/jheising)<br/>
 Copyright © 2013 Bug Labs, Inc. (http://buglabs.net)<br/>
-Copyright © 2015 Daisuke Tanaka ([https://github.com/dtanakax](https://github.com/dtanakax))
+Copyright © 2015 Daisuke Tanaka ([https://github.com/dtanakax](https://github.com/dtanakax))<br/>
 Licensed under the **MIT** license.
 
 ---
