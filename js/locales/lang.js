@@ -35,13 +35,13 @@
     if (query.lang !== undefined) {
         if (supported_languages.indexOf(query.lang) == -1) {
             query.lang = lang;
-            location.search = makeQueryParams(query);
+            window.location.search = makeQueryParams(query);
         }
     } else {
         if (supported_languages.indexOf(lang) === -1) {
             lang = 'en';
         }
         query.lang = lang;
-        location.search = makeQueryParams(query);
+        window.location.search = makeQueryParams(query);
     }
 })();
