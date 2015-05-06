@@ -195,6 +195,16 @@
                 <li data-bind="pluginEditor: {operation: 'add', type: 'widget'}">
                     <i class="fa-w fa-plus"></i>
                 </li>
+                <!-- ko if:canIncColWidth() -->
+                <li data-bind="click:incColWidth">
+                    <i class="fa-w fa-expand"></i>
+                </li>
+                <!-- /ko -->
+                <!-- ko if:canDecColWidth() -->
+                <li data-bind="click:decColWidth">
+                    <i class="fa-w fa-compress fa-rotate-90"></i>
+                </li>
+                <!-- /ko -->
                 <li data-bind="pluginEditor: {operation: 'edit', type: 'pane'}">
                     <i class="fa-w fa-wrench"></i>
                 </li>
