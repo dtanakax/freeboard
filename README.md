@@ -7,25 +7,37 @@ freeboard
 2. the act of freeing data from below the "waterline" and exposing it to the world.
 3. a damn-sexy, open source real-time dashboard builder/viewer for IOT and other web mashups.
 
-### Demo
-http://freeboard.github.io/freeboard
+Demo
+----------
 
-https://freeboard.io
+[http://dtanakax.github.io/freeboard/](http://dtanakax.github.io/freeboard/)
 
-### Screenshots
-![Weather](https://raw.github.com/Freeboard/branding/master/screenshots/freeboard-screenshot-1.jpg)
+[Open Weather Map Sample English version](http://dtanakax.github.io/freeboard/?lang=en&load=http%3A%2F%2Fdtanakax.github.io%2Ffreeboard%2Fexamples%2Fopen-weathermap-sample-en.json)
 
-### What is It?
+[Open Weather Map Sample Japanese version](http://dtanakax.github.io/freeboard/?lang=ja&load=http%3A%2F%2Fdtanakax.github.io%2Ffreeboard%2Fexamples%2Fopen-weathermap-sample.json)
+
+[ChartWidget Sample 1](http://dtanakax.github.io/freeboard/?load=http%3A%2F%2Fdtanakax.github.io%2Ffreeboard%2Fexamples%2Fc3transform_sample01.json)
+
+[ChartWidget Sample 2](http://dtanakax.github.io/freeboard/?load=http%3A%2F%2Fdtanakax.github.io%2Ffreeboard%2Fexamples%2Fc3showcase(laggy).json)
+
+[GaugeWidget Sample](http://dtanakax.github.io/freeboard/?load=http%3A%2F%2Fdtanakax.github.io%2Ffreeboard%2Fexamples%2Fgauge_sample.json)
+
+[TextWidget Sample](http://dtanakax.github.io/freeboard/?load=http%3A%2F%2Fdtanakax.github.io%2Ffreeboard%2Fexamples%2Ftextwidget_sample.json)
+
+What is It?
+----------
 
 Freeboard is a turn-key HTML-based "engine" for dashboards. Besides a nice looking layout engine, it provides a plugin architecture for creating datasources (which fetch data) and widgets (which display data)— freeboard then does all the work to connect the two together. Another feature of freeboard is its ability to run entirely in the browser as a single-page static web app without the need for a server. The feature makes it extremely attractive as a front-end for embedded devices which may have limited ability to serve complex and dynamic web pages.
 
 The code here is the client-side portion of what you see when you visit a freeboard at http://freeboard.io. It does not include any of the server-side code for user management, saving to a database or public/private functionality— this is left up to you to implement should you want to use freeboard as an online service.
 
-### How to Use
+How to Use
+----------
 
 Freeboard can be run entirely from a local hard drive. Simply download/clone the repository and open index.html. When using Chrome, you may run into issues with CORS when accessing JSON based APIs if you load from your local hard-drive— in this case you can switch to using JSONP or load index.html and run from a local or remote web server.
 
-### API
+API
+----------
 
 While freeboard runs as a stand-alone app out of the box, you can augment and control it from javascript with a simple API. All API calls are made on the `freeboard` singleton object.
 
@@ -151,11 +163,13 @@ Attach to a global freeboard event.
 
 -------
 
-### Building Plugins
+Building Plugins
+----------
 
-See http://freeboard.github.io/freeboard/docs/plugin_example.html for info on how to build plugins for freeboard.
+See http://dtanakax.github.io/freeboard/docs/plugin_example.html for info on how to build plugins for freeboard.
 
-### Testing Plugins
+Testing Plugins
+----------
 
 Just edit index.html and add a link to your javascript file near the end of the head.js script loader, like:
 
@@ -168,8 +182,12 @@ $(function()
 });
 ```
 
-### Copyright 
+Copyright 
+----------
 
-Copyright © 2013 Jim Heising (https://github.com/jheising)<br/>Copyright © 2013 Bug Labs, Inc. (http://buglabs.net)<br/>Licensed under the **MIT** license.
+Copyright © 2013 Jim Heising (https://github.com/jheising)<br/>
+Copyright © 2013 Bug Labs, Inc. (http://buglabs.net)<br/>
+Copyright © 2015 Daisuke Tanaka ([https://github.com/dtanakax](https://github.com/dtanakax))
+Licensed under the **MIT** license.
 
 ---
