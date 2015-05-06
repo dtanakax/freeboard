@@ -1,30 +1,47 @@
-// Detect language
+// Detect language & Redirect URL
 (function() {
     'use strict';
+
+    function getQueryParams() {
+        var vars = {}, max = 0, hash = "", array = "";
+        var url = window.location.search;
+        if (url === '')
+            return vars;
+
+        hash  = url.slice(1).split('&');
+        max = hash.length;
+        for (var i = 0; i < max; i++) {
+            array = hash[i].split('=');
+            vars[array[0]] = decodeURIComponent(array[1]);
+        }
+        return vars;
+    }
+
+    function makeQueryParams(params) {
+        return Object.keys(params).map(function(key) {
+            return [key, params[key]].map(encodeURIComponent).join("=");
+        }).join("&");
+    }
 
     var supported_languages = [
         'en',
         'ja'
     ];
 
-    function getParameterByName(name) {
-        name = name.replace(/[\[]/, '\\\[').replace(/[\]]/, '\\\]');
-        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'), results = regex.exec(location.search);
-        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-    }
-
     var lang = window.navigator.userLanguage || window.navigator.language || window.navigator.browserLanguage;
     lang = lang.substring(0,2);
 
-    var qlang = getParameterByName('lang');
-    if (qlang !== '') {
-        if (supported_languages.indexOf(qlang) == -1) {
-            location.search = location.search.replace('lang='+qlang, 'lang='+lang);
+    var query = getQueryParams();
+    if (query.lang !== undefined) {
+        if (supported_languages.indexOf(query.lang) == -1) {
+            query.lang = lang;
+            location.search = makeQueryParams(query);
         }
     } else {
         if (supported_languages.indexOf(lang) === -1) {
-            lang = 'en'
+            lang = 'en';
         }
-        location.search += 'lang=' + lang;
+        query.lang = lang;
+        location.search = makeQueryParams(query);
     }
 })();
