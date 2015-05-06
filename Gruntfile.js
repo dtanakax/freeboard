@@ -15,7 +15,8 @@ module.exports = function(grunt) {
                         'lib/js/thirdparty/head.js',
                         'lib/js/thirdparty/knockout.js',
                         'lib/js/thirdparty/jquery.js',
-                        'lib/js/thirdparty/i18next-1.7.7.min.js',
+                        'lib/js/thirdparty/i18next.js',
+                        'lib/js/thirdparty/i18next-init.js',
                         'lib/js/thirdparty/lodash.js',
                         'lib/js/thirdparty/jquery.gridster.js',
                         'lib/js/thirdparty/jquery.caret.js',
@@ -47,7 +48,7 @@ module.exports = function(grunt) {
                     'lib/js/freeboard/PluginEditor.js',
                     'lib/js/freeboard/ValueEditor.js',
                     'lib/js/freeboard/WidgetModel.js',
-                    'lib/js/freeboard/freeboard.js',
+                    'lib/js/freeboard/freeboard.js'
                 ],
                 dest : 'js/freeboard.js'
             },
